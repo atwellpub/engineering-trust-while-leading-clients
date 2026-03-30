@@ -1021,8 +1021,13 @@ ul.build-up {
     align-items: flex-start;
 }
 
-.header-photo-layout > h1 {
+.header-photo-layout > h1,
+.header-photo-layout > .sub-heading {
     flex: 0 0 100%;
+}
+
+.header-photo-layout > .sub-heading {
+    margin-bottom: 0;
 }
 
 .header-photo-left {
