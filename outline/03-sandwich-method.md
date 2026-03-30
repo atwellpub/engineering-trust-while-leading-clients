@@ -1,157 +1,126 @@
-
----
-
-ARC II
-THE SANDWICH METHOD
-
----
+# Arc II - Improved Retention Strategies (Slides 14-23)
 
 SLIDE 14
+Arc II - Improved Retention Strategies
 The Sandwich Method
-A Structured Documentation Workflow
-
-Three parts that transform how you deliver value:
-• Opening PDF (Foundational Bread)
-• Work Execution (Sandwich Filling)
-• Closing PDF (Final Bread)
+[Background: sandwich-blueprint.png]
 
 ---
 
 SLIDE 15
-The Power of the Uniform
+A Powerfully Simple Framework
+Why is it called the Sandwich Method?
 
-People look good in a uniform because it signals:
-• Professionalism and preparation
-• Belonging to a trusted organization
-• Competence through visual consistency
+[Image: Sandwich diagram]
 
-Your PDFs are your uniform.
-They dress your message in professional presentation.
+- Opening PDF - The foundational bread. A branded document delivered before work begins that sets expectations and builds confidence.
+- Work Execution - The filling. The actual delivery of services as agreed upon.
+- Closing PDF - The top bread. A branded document delivered upon completion that reinforces value and opens doors.
 
 ---
 
 SLIDE 16
-Superior Aesthetic = Superior Reception
+What goes in an opening PDF?
 
-Messages delivered with superior aesthetic are more likely to be:
-• Taken seriously
-• Shared with stakeholders
-• Remembered positively
-• Acted upon promptly
+[Image: Opening PDF wizard - left column]
 
-The same recommendation in plain text vs. branded PDF?
-The PDF wins every time.
+- Project goals and client pain points
+- Deliverables and milestones
+- Out of scope clarifications
+- Assumptions and constraints
+- Dependencies and client responsibilities
+- Timeline expectations
+- Success criteria
+- Communication policy
+- Establishes shared understanding before commitment
+
+Closing note: Signals professionalism and structured thinking
 
 ---
 
 SLIDE 17
-Why the Sandwich Method Works
+Deliver. The. Work.
+"There's value in this meal"
 
-• Formalizes communication at critical moments
-• Improves clarity and professionalism
-• Increases conversion rates
-• Creates natural upsell opportunities
-• Strengthens client relationships
+- Perform agreed scope as defined in Opening PDF
+- Use structured scope as reference point
+- Follow communication policy
+- Document decisions and tradeoffs
+- Maintain alignment with success criteria
+
+[Image: Superman eating sandwich]
 
 ---
 
 SLIDE 18
-Opening PDF: Foundational Bread
-Delivered before work begins
+Closing PDF: The Top Bread
+Delivered upon completion, highlighting the value added
 
-Establishes:
-• Project goals and client pain points
-• Deliverables and milestones
-• Out of scope clarifications
-• Assumptions and constraints
-• Dependencies and client responsibilities
-• Timeline expectations
-• Success criteria
-• Communication policy
-• Next steps for approval
+- Summary of work completed
+- Description of delivered outcomes and benefits
+- Notes on decisions or tradeoffs made
+- Confirmation of scope completion
+- Recommended next steps or opportunities
+- (emphasis) Reinforces value at moment of completion
+- (emphasis) Creates natural conversation for expansion
+- (emphasis) Provides shareable artifact that propagates your branding (it's good marketing)
+
+[Image: Chef sprinkling salt]
 
 ---
 
 SLIDE 19
-Opening PDF: The Professional Signal
+Why the Sandwich Method Works
 
-A branded PDF delivered during estimation phase
-• Establishes shared understanding before commitment
-• Serves as planning artifact and reference point
-• Signals professionalism and structured thinking
-• Reduces ambiguity during execution
+- Formalizes communication at critical moments
+- Improves clarity and professionalism
+- Increases conversion rates
+- Creates natural upsell opportunities
+- Strengthens client relationships
+- Generates marketing assets that can be shared with stakeholders (and beyond)
 
 ---
 
 SLIDE 20
-Work Execution: Sandwich Filling
-The actual delivery of services
+The Power of the Uniform
 
-• Perform agreed scope as defined in Opening PDF
-• Use structured scope as reference point
-• Follow communication policy
-• Document decisions and tradeoffs
-• Maintain alignment with success criteria
+[Half-screen background image: Man in uniform - left side]
+
+A well structured and branded PDF:
+- Signals professionalism and preparation
+- Conveys belonging to a trusted organization
+- Competence through visual consistency
+- Generates an aura of caring, inspiring confidence in your work
+
+Closing note: Do your best to look good.
+Although looks aren't everything, they can help you deliver your message and create a positive impression on your customer.
 
 ---
 
 SLIDE 21
-Closing PDF: Final Bread
-Delivered upon completion
+Do you know who else has aura?
 
-Includes:
-• Summary of work completed
-• Description of delivered outcomes and benefits
-• Notes on decisions or tradeoffs made
-• Confirmation of scope completion
-• Known limitations or follow-up considerations
-• Recommended next steps or opportunities
-• Optional suggestions for future improvements
+[Media reveal: Goku image]
+Caption: Goku -> Be like Goku.
 
 ---
 
 SLIDE 22
-Closing PDF: Reinforcing Value
+Do you know who else cares about presentation?
 
-Translates work performed into clear outcomes
-• Closes the loop professionally
-• Reinforces value at moment of completion
-• Supports smoother transitions into follow-on work
-• Creates natural conversation for expansion
-• Provides shareable artifact that propagates Codeable branding
+[Media reveal: Pilots image]
+Caption: Pilots -> And people trust them with their lives.
 
 ---
 
 SLIDE 23
-The Complete Sandwich
-
-Opening PDF: Sets expectations and builds trust
-↓
-Work Execution: Delivers on promises
-↓
-Closing PDF: Reinforces value and opens future opportunities
-
-Result: Professional consistency that increases client lifetime value
-
----
-
-SLIDE 24
-Presentation Signals Value
-
-• Format influences perception
-• Organized information feels safer
-• Visual discipline builds authority
-• Branded documentation propagates marketplace awareness
-
----
-
-SLIDE 25
 Upsells and Natural Timing
+PDFs offer natural upsell opportunities
 
-• Strike when the iron is hot
-• Offer options, not pressure
-• Expand value at natural inflection points
-• Closing PDF creates perfect moment for recommendations
-• Future improvements feel like opportunities, not sales
+- (Moving Metal) Strike when the iron is hot. Expand value at natural inflection points.
+- (The Restaurant Experience) Offer options, not pressure
+- (Brochure) Future improvements feel like opportunities, not sales
 
----
+[Card-stack images: blacksmith, buffet, brochure woman]
+
+Closing note: Closing PDF creates perfect moment for recommendations
