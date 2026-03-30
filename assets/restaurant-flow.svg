@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320">
+  <!-- Tier 1: Menu (Opening PDF) -->
+  <rect x="75" y="10" width="250" height="70" rx="10" fill="#27445c" stroke="#e3a463" stroke-width="2"/>
+  <text x="200" y="38" text-anchor="middle" fill="#e3a463" font-family="Inter, sans-serif" font-size="14" font-weight="700">The Menu</text>
+  <text x="200" y="58" text-anchor="middle" fill="#b3c3d3" font-family="Inter, sans-serif" font-size="11">Opening PDF — Present the experience</text>
+  <!-- Menu icon -->
+  <rect x="95" y="28" width="18" height="2" rx="1" fill="#e3a463" opacity="0.6"/>
+  <rect x="95" y="34" width="14" height="2" rx="1" fill="#e3a463" opacity="0.4"/>
+  <rect x="95" y="40" width="16" height="2" rx="1" fill="#e3a463" opacity="0.5"/>
+
+  <!-- Arrow 1 -->
+  <line x1="200" y1="80" x2="200" y2="110" stroke="#e3a463" stroke-width="1.5" opacity="0.6"/>
+  <polygon points="194,108 206,108 200,118" fill="#e3a463" opacity="0.6"/>
+
+  <!-- Tier 2: Meal (Work Execution) -->
+  <rect x="75" y="120" width="250" height="70" rx="10" fill="#455666" stroke="#537c9b" stroke-width="1.5"/>
+  <text x="200" y="148" text-anchor="middle" fill="#f5f0eb" font-family="Inter, sans-serif" font-size="14" font-weight="700">The Meal</text>
+  <text x="200" y="168" text-anchor="middle" fill="#b3c3d3" font-family="Inter, sans-serif" font-size="11">Work Execution — Deliver with quality</text>
+  <!-- Plate icon -->
+  <circle cx="105" cy="150" r="12" fill="none" stroke="#537c9b" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="105" cy="150" r="6" fill="none" stroke="#537c9b" stroke-width="1" opacity="0.4"/>
+
+  <!-- Arrow 2 -->
+  <line x1="200" y1="190" x2="200" y2="220" stroke="#e3a463" stroke-width="1.5" opacity="0.6"/>
+  <polygon points="194,218 206,218 200,228" fill="#e3a463" opacity="0.6"/>
+
+  <!-- Tier 3: Specials (Closing PDF) -->
+  <rect x="75" y="230" width="250" height="70" rx="10" fill="#27445c" stroke="#e5bc9c" stroke-width="2"/>
+  <text x="200" y="258" text-anchor="middle" fill="#e5bc9c" font-family="Inter, sans-serif" font-size="14" font-weight="700">The Specials</text>
+  <text x="200" y="278" text-anchor="middle" fill="#b3c3d3" font-family="Inter, sans-serif" font-size="11">Closing PDF — Recommend next opportunities</text>
+  <!-- Star icon -->
+  <polygon points="105,245 107,251 113,251 108,255 110,261 105,257 100,261 102,255 97,251 103,251" fill="#e5bc9c" opacity="0.6"/>
+</svg>

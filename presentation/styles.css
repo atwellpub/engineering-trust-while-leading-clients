@@ -1,0 +1,1704 @@
+/* ============================================
+   Engineering Trust & Leading Clients
+   Warm Navy Theme — styles.css
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ---------- Custom Properties ---------- */
+:root {
+    /* Core palette */
+    --amber: #e3a463;
+    --peach: #e5bc9c;
+    --navy: #27445c;
+    --steel: #537c9b;
+    --ice: #b3c3d3;
+    --slate: #455666;
+
+    /* Derived / semantic */
+    --bg-primary: #1d3548;
+    --bg-secondary: #27445c;
+    --bg-elevated: #455666;
+    --bg-surface: #537c9b;
+    --text-primary: #f5f0eb;
+    --text-secondary: #b3c3d3;
+    --text-muted: #7a95a8;
+    --accent-primary: #e3a463;
+    --accent-light: #e5bc9c;
+
+    /* Borders / separators */
+    --border-warm: rgba(227, 164, 99, 0.15);
+    --border-neutral: rgba(179, 195, 211, 0.1);
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Slideshow Container ---------- */
+.slideshow {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ---------- Individual Slide ---------- */
+.slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 3rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.slide.active .slide-content {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* ---------- Slide Content ---------- */
+.slide-content {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.slide-content.left-aligned {
+    text-align: left;
+}
+
+/* ---------- Per-Arc Gradient Backgrounds ---------- */
+.slide[data-arc="intro"] {
+    background: linear-gradient(135deg, #1d3548 0%, #27445c 100%);
+}
+.slide[data-arc="1"] {
+    background: linear-gradient(135deg, #27445c 0%, #2a4f6a 100%);
+}
+.slide[data-arc="2"] {
+    background: linear-gradient(135deg, #27445c 0%, #3a4a50 100%);
+}
+.slide[data-arc="3"] {
+    background: linear-gradient(135deg, #27445c 0%, #2d4a56 100%);
+}
+.slide[data-arc="4"] {
+    background: linear-gradient(135deg, #1d3548 0%, #2a3f4e 100%);
+}
+
+/* ============================================
+   SLIDE TYPE CLASSES
+   ============================================ */
+
+/* ---------- 1. Title Slide ---------- */
+.slide.title-slide {
+    background: linear-gradient(135deg, #1d3548 0%, #27445c 100%);
+}
+
+.slide.title-slide h1 {
+    color: var(--text-primary);
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.slide.title-slide p {
+    color: var(--accent-light);
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.speaker-info h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.speaker-headshot {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 2px solid var(--navy);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.slide.title-slide .divider {
+    width: 100%;
+    height: 2px;
+    background: var(--accent-primary);
+    margin: 1rem auto;
+}
+
+/* ---------- 2. Bullet Slide ---------- */
+.slide.bullet-slide .slide-content {
+    text-align: left;
+}
+
+.slide.bullet-slide h1 {
+    color: var(--text-primary);
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.slide.bullet-slide ul {
+    list-style: none;
+    padding: 0;
+}
+
+.slide.bullet-slide li {
+    color: var(--text-secondary);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.slide.bullet-slide li::before {
+    content: "\25CF";
+    color: var(--accent-primary);
+    position: absolute;
+    left: 0;
+    font-size: 0.75em;
+}
+
+.slide.bullet-slide li ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.75rem;
+    margin-left: 0.5rem;
+}
+
+.slide.bullet-slide li ul li {
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.slide.bullet-slide li ul li::before {
+    content: "\25CB";
+    font-size: 0.65em;
+}
+
+/* ---------- 3. Lettered Slide ---------- */
+.slide.lettered-slide .slide-content {
+    text-align: left;
+}
+
+.slide.lettered-slide h1 {
+    color: var(--text-primary);
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.slide.lettered-slide ul {
+    list-style: none;
+    padding: 0;
+}
+
+.slide.lettered-slide li {
+    color: var(--text-secondary);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    padding-left: 0;
+}
+
+.takeaway-label {
+    display: inline-block;
+    color: var(--accent-primary);
+    font-size: 0.75em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.2rem;
+}
+
+.slide.lettered-slide li strong {
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+/* ---------- 4. Arc Intro Slide ---------- */
+.slide.arc-intro-slide .slide-content {
+    text-align: center;
+}
+
+.arc-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(29, 53, 72, 0.82);
+    z-index: 0;
+}
+
+.arc-bg-overlay + .slide-content {
+    position: relative;
+    z-index: 1;
+}
+
+.arc-label {
+    color: #a8c76a;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.arc-label-section {
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    opacity: 0.85;
+}
+
+.arc-title {
+    color: var(--text-primary);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.arc-divider {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-light));
+    margin: 1.5rem auto 0;
+}
+
+/* ---------- 5. Subtitle + Bullet Slide ---------- */
+.slide.subtitle-bullet-slide .slide-content {
+    text-align: left;
+}
+
+.slide.subtitle-bullet-slide h1 {
+    color: var(--text-primary);
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.25rem;
+}
+
+.slide.subtitle-bullet-slide .subtitle {
+    color: var(--accent-light);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    margin-bottom: 2rem;
+}
+
+.slide.subtitle-bullet-slide ul {
+    list-style: none;
+    padding: 0;
+}
+
+.slide.subtitle-bullet-slide li {
+    color: var(--text-secondary);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.slide.subtitle-bullet-slide li::before {
+    content: "\25CF";
+    color: var(--accent-primary);
+    position: absolute;
+    left: 0;
+    font-size: 0.75em;
+}
+
+.slide.subtitle-bullet-slide li ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.slide.subtitle-bullet-slide li ul li {
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    margin-bottom: 0.4rem;
+    padding-left: 1.5rem;
+}
+
+.slide.subtitle-bullet-slide li ul li::before {
+    content: "\25CB";
+    font-size: 0.65em;
+}
+
+/* ---------- 6. Quote Slide ---------- */
+.slide.quote-slide .slide-content {
+    text-align: left;
+}
+
+.slide.quote-slide h1 {
+    color: var(--text-primary);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+}
+
+.quote-block {
+    background: var(--bg-elevated);
+    border-left: 3px solid var(--accent-primary);
+    border-radius: 0 8px 8px 0;
+    padding: 1.5rem 2rem;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.quote-block p {
+    color: var(--text-primary);
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.quote-block .annotation {
+    color: var(--accent-primary);
+    font-size: 0.875rem;
+    font-style: normal;
+    margin-top: 0.75rem;
+}
+
+/* Quote with Portrait */
+.quote-with-portrait {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.portrait-frame {
+    flex: 0 0 auto;
+}
+
+.portrait-frame img {
+    width: 240px;
+    height: 280px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 3px solid var(--accent-primary);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.quote-with-portrait .quote-block {
+    flex: 1;
+}
+
+/* ---------- 7. Flow Slide ---------- */
+.slide.flow-slide .slide-content {
+    text-align: center;
+}
+
+.slide.flow-slide h1 {
+    color: var(--text-primary);
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+}
+
+.flow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.flow-item {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.flow-item .step-label {
+    color: var(--accent-primary);
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+.flow-item .step-desc {
+    color: var(--text-secondary);
+    font-size: clamp(0.85rem, 2vw, 1rem);
+}
+
+.flow-arrow {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    margin: 0.25rem 0;
+}
+
+.flow-result {
+    color: var(--accent-light);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+/* ---------- 8. Visual Slide ---------- */
+.slide.visual-slide {
+    background: var(--bg-primary);
+}
+
+.slide.visual-slide .slide-content {
+    text-align: center;
+}
+
+.visual-slide img {
+    max-width: 60%;
+    max-height: 50vh;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-warm);
+    object-fit: cover;
+}
+
+.visual-slide .visual-caption {
+    color: var(--text-muted);
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    margin-top: 1.25rem;
+}
+
+.visual-slide h1 {
+    color: var(--text-primary);
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+/* Image placeholder for missing stock photos */
+.image-placeholder {
+    width: 60%;
+    max-width: 500px;
+    aspect-ratio: 16 / 9;
+    background: var(--bg-elevated);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 1px solid var(--border-warm);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.image-placeholder span {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+/* ---------- 9. Columns Slide ---------- */
+.slide.columns-slide .slide-content {
+    text-align: left;
+    max-width: 900px;
+}
+
+.slide.columns-slide h1 {
+    color: var(--text-primary);
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.columns-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.columns-grid.two-col {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.column-card {
+    background: var(--bg-elevated);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    border-top: 2px solid var(--accent-primary);
+    display: flex;
+    flex-direction: column;
+}
+
+.column-card .column-note:last-child {
+    margin-top: auto;
+}
+
+.column-card h3 {
+    color: var(--accent-primary);
+    font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.column-card p {
+    color: var(--text-secondary);
+    font-size: clamp(1rem, 2.2vw, 1.15rem);
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+}
+
+.column-note {
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--accent-light) !important;
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem) !important;
+    line-height: 1.6;
+}
+
+.column-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.column-card li {
+    color: var(--text-secondary);
+    font-size: clamp(1rem, 2.2vw, 1.15rem);
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+
+/* Build-up list: visually reversed so items appear bottom-to-top */
+ul.build-up {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+.columns-footnote {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    font-style: italic;
+}
+
+.column-card li::before {
+    content: "\25CF";
+    color: var(--accent-light);
+    position: absolute;
+    left: 0;
+    font-size: 0.6em;
+}
+
+/* ---------- 10. Recap Slide ---------- */
+.slide.recap-slide .slide-content {
+    text-align: left;
+}
+
+.slide.recap-slide h1 {
+    color: var(--text-primary);
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.slide.recap-slide ul {
+    list-style: none;
+    padding: 0;
+}
+
+.slide.recap-slide li {
+    color: var(--text-secondary);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.slide.recap-slide li::before {
+    content: "\2713";
+    color: var(--accent-primary);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+.slide.recap-slide .tagline {
+    color: var(--accent-light);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: 500;
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+/* ============================================
+   COMPONENT STYLES
+   ============================================ */
+
+/* ---------- Navigation Hints ---------- */
+.nav-hints {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    z-index: 10;
+}
+
+.nav-hints span {
+    cursor: pointer;
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    color: rgba(122, 149, 168, 0.5);
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.nav-hints span:hover {
+    color: var(--accent-light);
+    background: rgba(229, 188, 156, 0.12);
+}
+
+#nav-next.ready {
+    color: var(--accent-light);
+    background: rgba(229, 188, 156, 0.12);
+}
+
+/* ---------- Slide Counter ---------- */
+.slide-header-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 3rem;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.slide-arc-label {
+    color: #4e6a8a;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.slide-arc-label.visible {
+    opacity: 1;
+}
+
+.slide-counter {
+    color: var(--accent-light);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ============================================
+   ARC OVERVIEW LAYOUT (Slide 5)
+   ============================================ */
+
+.slide .slide-content.arc-overview-layout {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    text-align: left;
+    max-width: 960px;
+}
+
+.arc-overview-text {
+    flex: 1;
+}
+
+.arc-badges {
+    flex: 0 0 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.arc-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 110px;
+    padding: 0.75rem;
+    border-radius: 10px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-warm);
+}
+
+.arc-badge svg {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 0.5rem;
+}
+
+.arc-badge-label {
+    color: var(--accent-primary);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.arc-badge-title {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    margin-top: 0.15rem;
+}
+
+@media (max-width: 768px) {
+    .arc-overview-layout {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .arc-badges {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .arc-badge {
+        width: 90px;
+        padding: 0.5rem;
+    }
+
+    .arc-badge svg {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* ============================================
+   STEP-REVEAL SYSTEM
+   ============================================ */
+
+/* Hide all steppable elements by default via CSS (no JS flash) */
+.slide:not(.title-slide) .slide-content > ul > li,
+.slide:not(.title-slide) .slide-content > ul > li > ul > li,
+.slide:not(.title-slide) .slide-content > .background-text > ul > li,
+.slide:not(.title-slide) .slide-content > .arc-overview-text > ul > li,
+.slide:not(.title-slide) .slide-content > .quote-block,
+.slide:not(.title-slide) .slide-content > .quote-with-portrait,
+.slide:not(.title-slide) .slide-content .flow-item,
+.slide:not(.title-slide) .slide-content .flow-arrow,
+.slide:not(.title-slide) .slide-content > .svg-container,
+.slide:not(.title-slide) .slide-content > .image-placeholder,
+.slide:not(.title-slide) .slide-content > p:not(.subtitle):not(.sub-heading):not(.visual-caption),
+.slide:not(.title-slide) .slide-content .flow-result,
+.slide:not(.title-slide) .slide-content .column-card,
+.slide:not(.title-slide) .slide-content .cta-block,
+.slide:not(.title-slide) .slide-content .tagline {
+    opacity: 0;
+    transform: translateY(15px);
+    pointer-events: none;
+}
+
+/* Hide background photos and card-stack images by default (no flash) */
+
+.stack-card {
+    opacity: 0 !important;
+}
+
+.stack-card.card-visible {
+    opacity: 1 !important;
+}
+
+.step {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    pointer-events: none;
+}
+
+.step.step-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+}
+
+.step-paired {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    pointer-events: none;
+}
+
+.step-paired.step-visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* ============================================
+   TRIANGLE TWO-COLUMN LAYOUT (Slide 6)
+   ============================================ */
+
+.triangle-layout {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.triangle-svg {
+    flex: 1;
+    max-width: 400px;
+}
+
+.triangle-svg img {
+    width: 100%;
+    height: auto;
+}
+
+.triangle-traditional {
+    flex: 1;
+    text-align: left;
+}
+
+.triangle-traditional h3 {
+    color: var(--accent-primary);
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+/* ---------- Inline GIF ---------- */
+.inline-gif-container {
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.inline-gif {
+    max-height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* ---------- Hide on Reveal ---------- */
+.hide-on-reveal {
+    transition: opacity 0.4s ease;
+}
+
+.hide-on-reveal.hidden {
+    opacity: 0;
+}
+
+/* ---------- Fullscreen Media (single image/gif slides) ---------- */
+.media-reveal-slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.media-reveal-slide .step:not(.step-visible),
+.media-reveal-slide .step-paired:not(.step-visible) {
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    transform: none;
+}
+
+.media-reveal-slide .step {
+    transform: none;
+}
+
+.media-headline {
+    position: relative;
+    z-index: 2;
+}
+
+.media-headline.hidden {
+    opacity: 0 !important;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    pointer-events: none;
+}
+
+/* Media caption below image */
+.media-caption {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: var(--text-primary);
+    margin-top: 1rem;
+    transition: opacity 0.4s ease;
+}
+
+.media-caption.crossed-out {
+    opacity: 0 !important;
+    position: absolute;
+    pointer-events: none;
+    transition: none;
+}
+
+.media-caption-replace {
+    margin-top: 0.5rem;
+}
+
+.fullscreen-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.fullscreen-media img {
+    max-width: 90%;
+    max-height: 60vh;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* ---------- Slide Closing Statement ---------- */
+.slide-closing {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    color: var(--accent-primary);
+    font-style: italic;
+    font-size: clamp(1rem, 2.2vw, 1.15rem);
+    text-align: center;
+    width: 100%;
+}
+
+/* ---------- Sub-heading (arc label above headline) ---------- */
+.sub-heading {
+    color: var(--accent-primary);
+    font-size: clamp(0.85rem, 1.8vw, 1rem);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.5rem;
+}
+
+/* ---------- Header + Photo Left / List Right Layout ---------- */
+.header-photo-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.header-photo-layout > h1 {
+    flex: 0 0 100%;
+}
+
+.header-photo-left {
+    flex: 0 0 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-photo-left .background-photo {
+    margin-top: 0;
+    width: 100%;
+}
+
+.header-photo-right {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.header-photo-right ul {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .header-photo-layout {
+        flex-direction: column;
+    }
+
+    .header-photo-left {
+        flex: 1;
+    }
+}
+
+/* ---------- Progressive Photo Opacity ---------- */
+.progressive-photo {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* ---------- Half-Screen Background Image ---------- */
+.slide-half-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.slide-half-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+}
+
+.slide-content-right {
+    margin-left: 50%;
+    width: 50%;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 4rem;
+    box-sizing: border-box;
+}
+
+.slide-half-bg-right {
+    left: auto;
+    right: 0;
+}
+
+.slide-content-left {
+    width: 50%;
+    margin-right: 50%;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 4rem;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .slide-half-bg {
+        width: 100%;
+        height: 40%;
+    }
+
+    .slide-content-right {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 40%;
+        padding: 1.5rem;
+    }
+
+    .slide-content-left {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
+/* ============================================
+   BACKGROUND SLIDE LAYOUT (Slide 3)
+   ============================================ */
+
+.background-layout {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    text-align: left;
+    max-width: 900px;
+    min-height: 380px;
+}
+
+.background-text {
+    flex: 1;
+}
+
+.background-photo {
+    flex: 0 0 30%;
+}
+
+
+.background-photo img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-warm);
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .background-layout {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+    }
+
+    .background-photo {
+        width: 160px;
+    }
+}
+
+/* ---------- Sandwich Framework Layout (Slide 15) ---------- */
+.sandwich-framework-layout {
+    text-align: left;
+    max-width: 950px;
+}
+
+.sandwich-framework-layout h1 {
+    margin-bottom: 0.25rem;
+}
+
+.sandwich-framework-layout .subtitle {
+    margin-bottom: 1.5rem;
+}
+
+.sandwich-columns {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.sandwich-columns .background-photo {
+    flex: 0 0 auto;
+    width: 33vw;
+    max-width: 400px;
+}
+
+.sandwich-columns .background-text {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .sandwich-columns {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .sandwich-columns .background-photo {
+        width: 200px;
+    }
+}
+
+/* ---------- Card Stack Layout (Slide 9 - Pathos) ---------- */
+.card-stack {
+    position: relative;
+    flex: 0 0 33vw;
+    max-width: 400px;
+    height: 320px;
+}
+
+.stack-card {
+    position: absolute;
+    width: 75%;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-warm);
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+.stack-card:nth-child(1) {
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.stack-card:nth-child(2) {
+    top: 30px;
+    left: 40px;
+    z-index: 2;
+}
+
+.stack-card:nth-child(3) {
+    top: 60px;
+    left: 80px;
+    z-index: 3;
+}
+
+.stack-card:nth-child(4) {
+    top: 90px;
+    left: 120px;
+    z-index: 4;
+}
+
+.stack-card:nth-child(5) {
+    top: 120px;
+    left: 160px;
+    z-index: 5;
+}
+
+.stack-card.card-visible {
+    opacity: 1 !important;
+}
+
+@media (max-width: 768px) {
+    .card-stack {
+        flex: 0 0 auto;
+        width: 200px;
+        height: 180px;
+        align-self: center;
+    }
+
+    .stack-card {
+        width: 70%;
+    }
+
+    .stack-card:nth-child(2) {
+        top: 20px;
+        left: 25px;
+    }
+
+    .stack-card:nth-child(3) {
+        top: 40px;
+        left: 50px;
+    }
+
+    .stack-card:nth-child(4) {
+        top: 60px;
+        left: 75px;
+    }
+
+    .stack-card:nth-child(5) {
+        top: 80px;
+        left: 100px;
+    }
+}
+
+/* ---------- Ethos Three-Column Layout (Slide 8) ---------- */
+.ethos-layout {
+    text-align: left;
+    max-width: 960px !important;
+}
+
+.ethos-columns {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+}
+
+.traditional-appeal {
+    flex: 1;
+    text-align: left;
+    transition: opacity 0.4s ease;
+}
+
+.traditional-appeal h3 {
+    color: var(--accent-primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.traditional-appeal ul {
+    list-style: none;
+    padding: 0;
+}
+
+.traditional-appeal li {
+    color: var(--text-secondary) !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    padding-left: 1.5rem !important;
+    position: relative;
+    margin-bottom: 0.4rem !important;
+    transition: all 0.4s ease;
+}
+
+.traditional-appeal li::before {
+    content: "\25CF" !important;
+    color: var(--accent-primary) !important;
+    position: absolute;
+    left: 0;
+    font-size: 0.75em !important;
+    transition: all 0.4s ease;
+}
+
+/* Crossed-out state */
+.traditional-appeal.crossed-out li {
+    text-decoration: line-through;
+    opacity: 0.4 !important;
+    color: var(--text-muted) !important;
+}
+
+.traditional-appeal.crossed-out li::before {
+    content: "\2717" !important;
+    color: #c45 !important;
+}
+
+.ethos-photo {
+    flex: 0 0 180px;
+}
+
+.ethos-photo img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-warm);
+    object-fit: cover;
+}
+
+.ethos-approved {
+    flex: 1;
+    text-align: left;
+}
+
+.ethos-approved h3 {
+    color: var(--accent-light);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.ethos-approved ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ethos-approved li {
+    color: var(--text-secondary) !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    padding-left: 1.5rem !important;
+    position: relative;
+    margin-bottom: 0.4rem !important;
+}
+
+.ethos-approved li::before {
+    content: "\2713" !important;
+    color: var(--accent-primary) !important;
+    position: absolute;
+    left: 0;
+    font-size: 0.85em !important;
+}
+
+.ethos-summary {
+    text-align: center;
+    color: var(--accent-light);
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .ethos-columns {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .ethos-photo {
+        flex: 0 0 auto;
+        width: 160px;
+        align-self: center;
+    }
+}
+
+.triangle-traditional ul {
+    list-style: none;
+    padding: 0;
+}
+
+.triangle-traditional li {
+    color: var(--text-secondary);
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    line-height: 1.7;
+    margin-bottom: 0.6rem;
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.triangle-traditional li::before {
+    content: "\25CF";
+    color: var(--accent-primary);
+    position: absolute;
+    left: 0;
+    font-size: 0.6em;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.highlight {
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+.underline-accent {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-primary);
+    text-underline-offset: 4px;
+}
+
+.emphasis-soft {
+    color: #8bb8a8 !important;
+    font-style: italic;
+}
+
+.dimmed {
+    color: var(--text-muted);
+}
+
+/* ---------- SVG containers ---------- */
+.svg-container {
+    margin: 1.5rem auto;
+    max-width: 400px;
+    width: 80%;
+}
+
+.svg-container svg {
+    width: 100%;
+    height: auto;
+}
+
+/* Inline SVG within visual slides */
+.visual-slide .svg-container {
+    max-width: 500px;
+}
+
+/* ---------- Narrative text (story slides) ---------- */
+.narrative-text {
+    color: var(--text-secondary);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.narrative-text:last-child {
+    margin-bottom: 0;
+}
+
+.narrative-quote {
+    color: var(--text-primary);
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    line-height: 1.8;
+    font-style: italic;
+    border-left: 2px solid var(--accent-primary);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+/* ---------- CTA (final slide) ---------- */
+.cta-block {
+    margin-top: 2rem;
+}
+
+.cta-block p {
+    color: var(--accent-light);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+}
+
+.cta-block .cta-emphasis {
+    color: var(--accent-primary);
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .slide {
+        transition: none;
+    }
+    .slide.active .slide-content {
+        animation: none;
+    }
+    .step {
+        transform: none;
+        transition: opacity 0.2s ease;
+    }
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Tablet landscape */
+@media (max-width: 1024px) {
+    .slide {
+        padding: 3rem 2.5rem;
+    }
+
+    .slide-content {
+        max-width: 700px;
+    }
+
+    .columns-grid {
+        gap: 1rem;
+    }
+
+    .column-card {
+        padding: 1rem 1.25rem;
+    }
+
+    .visual-slide img,
+    .image-placeholder {
+        max-width: 70%;
+        width: 70%;
+    }
+}
+
+    .triangle-layout {
+        gap: 1.5rem;
+    }
+
+    .triangle-svg {
+        max-width: 320px;
+    }
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+    .slide {
+        padding: 3rem 2rem;
+    }
+
+    .slide-content {
+        max-width: 100%;
+    }
+
+    .columns-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .triangle-layout {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .triangle-svg {
+        max-width: 280px;
+    }
+
+    .nav-hints {
+        bottom: 1rem;
+        left: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .slide-header-bar {
+        padding: 1rem 1.5rem;
+    }
+
+    .visual-slide img,
+    .image-placeholder {
+        max-width: 85%;
+        width: 85%;
+    }
+
+    .quote-block {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .svg-container {
+        max-width: 300px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .slide {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .nav-hints {
+        bottom: 0.75rem;
+        left: 1rem;
+        right: 1rem;
+        font-size: 0.75rem;
+    }
+
+    .slide-header-bar {
+        padding: 0.75rem 1rem;
+    }
+
+    .slide-counter {
+        font-size: 0.875rem;
+    }
+
+    .visual-slide img,
+    .image-placeholder {
+        max-width: 95%;
+        width: 95%;
+    }
+
+    .quote-block {
+        padding: 1rem 1.25rem;
+    }
+
+    .columns-grid {
+        gap: 0.75rem;
+    }
+
+    .svg-container {
+        max-width: 250px;
+    }
+
+    .flow-item .step-label,
+    .flow-item .step-desc {
+        font-size: 0.85rem;
+    }
+}
