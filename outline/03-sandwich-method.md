@@ -20,6 +20,7 @@ Why is it called the Sandwich Method?
 ---
 
 SLIDE 16
+Sub-heading: Bread.
 What goes in an opening PDF?
 
 [Image: Opening PDF wizard - left column]
@@ -39,8 +40,8 @@ Closing note: Signals professionalism and structured thinking
 ---
 
 SLIDE 17
+Sub-heading: The Middle Part
 Deliver. The. Work.
-"There's value in this meal"
 
 - Perform agreed scope as defined in Opening PDF
 - Use structured scope as reference point
@@ -48,13 +49,15 @@ Deliver. The. Work.
 - Document decisions and tradeoffs
 - Maintain alignment with success criteria
 
+Closing note: "There's value in this meal"
+
 [Image: Superman eating sandwich]
 
 ---
 
 SLIDE 18
-Closing PDF: The Top Bread
-Delivered upon completion, highlighting the value added
+Sub-heading: More Bread
+What goes into your closing PDF?
 
 - Summary of work completed
 - Description of delivered outcomes and benefits
@@ -64,6 +67,8 @@ Delivered upon completion, highlighting the value added
 - (emphasis) Reinforces value at moment of completion
 - (emphasis) Creates natural conversation for expansion
 - (emphasis) Provides shareable artifact that propagates your branding (it's good marketing)
+
+Closing note: Delivered upon completion, highlighting the value added
 
 [Image: Chef sprinkling salt]
 

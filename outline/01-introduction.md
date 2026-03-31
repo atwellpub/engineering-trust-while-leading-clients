@@ -21,15 +21,19 @@ My Background
 - Held every role in customer support
 - Currently co-manages the Client and Partner Success Divisions
 
+(No image)
+
 ---
 
 SLIDE 4
 What I Can Offer
 
 - Reviewed thousands of Codeable projects
-- Worked closely with hundreds of experts and clients across different contexts
-- Refined sense of what success looks like from a client and expert perspective
-- Have insights into how experts win competitive edges
+- Worked closely with hundreds of experts and clients
+- Built a clear understanding of what successful outcomes look like from both sides
+- Offer practical insight into how experts win and keep their edge
+
+(No image)
 
 ---
 

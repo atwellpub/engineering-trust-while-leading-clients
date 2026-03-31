@@ -1,6 +1,6 @@
 # Engineering Trust & Leading Clients
 
-**[View the presentation](https://atwellpub.github.io/engineering-trust-while-leading-clients/presentation/)**
+**[View the presentation](https://atwellpub.github.io/engineering-trust-while-leading-clients/presentation/index.html)**
 
 An interactive HTML slide presentation built for a Codeable Skillset Chat. The presentation covers practical strategies for building client trust, improving communication, and growing professional relationships on the Codeable platform.
 
