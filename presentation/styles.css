@@ -549,7 +549,7 @@ body {
     flex-direction: column;
 }
 
-.column-card .column-note:last-child {
+.column-card ul + .column-note {
     margin-top: auto;
 }
 

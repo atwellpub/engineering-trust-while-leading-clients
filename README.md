@@ -13,6 +13,8 @@ presentation/       # Main slide deck
   script.js         # Slide navigation, step animations, keyboard controls
 assets/             # Images, SVGs, and GIFs used in slides
 outline/            # Presentation outline and planning docs
+style-guide/        # Slide type reference templates
+  index.html        # 20 slides demoing every layout type with placeholder content
 ```
 
 ## Arcs

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Guide - Slide Type Templates</title>
+    <link rel="stylesheet" href="../presentation/styles.css">
+</head>
+<body>
+
+<div class="slideshow">
+
+    <!-- ============================================
+         SLIDE COUNTER & NAV HINTS (global)
+         ============================================ -->
+    <div class="slide-header-bar">
+        <div class="slide-arc-label" id="slide-arc-label"></div>
+        <div class="slide-counter">
+            <span id="current-slide">1</span> / <span id="total-slides">20</span>
+        </div>
+    </div>
+    <div class="nav-hints">
+        <span id="nav-prev">&larr; Previous</span>
+        <span id="nav-next">Next &rarr;</span>
+    </div>
+
+    <!-- ============================================
+         SLIDE 1: title-slide (basic)
+         Centered headline + subtitle.
+         Use for: presentation title, section headers, simple centered messages.
+         ============================================ -->
+    <div class="slide title-slide" data-arc="intro">
+        <div class="slide-content">
+            <h1>Slide Title Here</h1>
+            <p>Subtitle or tagline text goes here</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 2: title-slide + .speaker-info
+         Speaker intro with headshot image.
+         Use for: introducing the presenter at the start of a deck.
+         ============================================ -->
+    <div class="slide title-slide" data-arc="intro">
+        <div class="slide-content">
+            <div style="width: 200px; height: 200px; background: var(--bg-elevated); border-radius: 8px; margin: 0 auto 1.5rem; border: 2px solid var(--navy); box-shadow: 0 8px 24px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;">
+                <span style="color: var(--text-muted); font-size: 0.875rem;">Headshot</span>
+            </div>
+            <div class="step speaker-info">
+                <h1>Speaker Name</h1>
+                <p>Role, Organization</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 3: title-slide + .cta-block + .divider
+         Call-to-action closing slide with dividers.
+         Use for: final slide, closing message, call to action.
+         ============================================ -->
+    <div class="slide title-slide" data-arc="4">
+        <div class="slide-content">
+            <div class="divider"></div>
+            <h1>Call to Action Headline</h1>
+            <div class="divider"></div>
+            <div class="cta-block">
+                <p>First line of the CTA message.</p>
+                <p>Second line of the CTA message.</p>
+                <p>Third line of the CTA message.</p>
+                <p class="cta-emphasis">Emphasized closing statement.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 4: bullet-slide (basic)
+         Standard bullet list with heading.
+         Use for: any simple list of points, takeaways, features.
+         ============================================ -->
+    <div class="slide bullet-slide" data-arc="1">
+        <div class="slide-content">
+            <h1>Bullet Slide Title</h1>
+            <ul>
+                <li>First bullet point goes here</li>
+                <li>Second bullet point goes here</li>
+                <li>Third bullet point goes here</li>
+                <li>Fourth bullet point goes here</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 5: bullet-slide + nested ul
+         Bullet list with indented child items.
+         Use for: hierarchical content, topics with sub-points.
+         ============================================ -->
+    <div class="slide bullet-slide" data-arc="1">
+        <div class="slide-content">
+            <h1>Nested Bullet Slide</h1>
+            <ul>
+                <li>Parent item one
+                    <ul>
+                        <li>Child item A</li>
+                        <li>Child item B</li>
+                    </ul>
+                </li>
+                <li>Parent item two
+                    <ul>
+                        <li>Child item C</li>
+                        <li>Child item D</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 6: bullet-slide + .slide-half-bg + .slide-content-right
+         Half-screen image on left, text content on right.
+         Use for: story slides, visual emphasis with supporting text.
+         ============================================ -->
+    <div class="slide bullet-slide" data-arc="2">
+        <div class="slide-half-bg">
+            <div style="width: 100%; height: 100%; background: var(--bg-elevated); display: flex; align-items: center; justify-content: center; opacity: 0.35;">
+                <span style="color: var(--text-muted); font-size: 0.875rem;">Image Left</span>
+            </div>
+        </div>
+        <div class="slide-content slide-content-right">
+            <h1>Half-Image Left Layout</h1>
+            <p class="subtitle">Subtitle or context text here</p>
+            <ul>
+                <li>Bullet point one</li>
+                <li>Bullet point two</li>
+                <li>Bullet point three</li>
+            </ul>
+            <p class="slide-closing step">Closing statement goes here.</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 7: bullet-slide + .slide-half-bg-right + .slide-content-left
+         Half-screen image on right, text content on left.
+         Use for: alternate layout of half-image slides, visual variety.
+         ============================================ -->
+    <div class="slide bullet-slide" data-arc="2">
+        <div class="slide-half-bg slide-half-bg-right">
+            <div style="width: 100%; height: 100%; background: var(--bg-elevated); display: flex; align-items: center; justify-content: center; opacity: 0.35;">
+                <span style="color: var(--text-muted); font-size: 0.875rem;">Image Right</span>
+            </div>
+        </div>
+        <div class="slide-content slide-content-left">
+            <h1>Half-Image Right Layout</h1>
+            <p class="subtitle">Subtitle or context text here</p>
+            <ul>
+                <li>Bullet point one</li>
+                <li>Bullet point two</li>
+                <li>Bullet point three</li>
+            </ul>
+            <p class="slide-closing step">Closing statement goes here.</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 8: bullet-slide + .media-reveal-slide
+         Fullscreen media with caption swap on reveal.
+         Use for: dramatic image reveals, humor slides, single-image emphasis.
+         ============================================ -->
+    <div class="slide bullet-slide" data-arc="2">
+        <div class="slide-content media-reveal-slide">
+            <h1 class="media-headline">Headline Before the Reveal</h1>
+            <div class="fullscreen-media step" data-hide-header>
+                <div style="width: 80%; max-height: 60vh; aspect-ratio: 16/9; background: var(--bg-elevated); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                    <span style="color: var(--text-muted); font-size: 0.875rem;">Fullscreen Media</span>
+                </div>
+                <p class="media-caption" id="sg-media-caption-1">Initial caption text</p>
+            </div>
+            <p class="media-caption step" data-cross-out="sg-media-caption-1">Replacement caption text</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 9: lettered-slide + .arc-overview-layout
+         Numbered/badged list with SVG badges on the right.
+         Use for: agenda/overview slides, multi-arc summaries.
+         ============================================ -->
+    <div class="slide lettered-slide" data-arc="intro">
+        <div class="slide-content arc-overview-layout">
+            <div class="arc-overview-text">
+                <h1>Overview Slide Title</h1>
+                <ul>
+                    <li data-badge="1"><strong>SECTION I</strong> <span class="dimmed">-</span> <span class="takeaway-label">LABEL ONE</span><br>Description of the first section or takeaway</li>
+                    <li data-badge="2"><strong>SECTION II</strong> <span class="dimmed">-</span> <span class="takeaway-label">LABEL TWO</span><br>Description of the second section or takeaway</li>
+                    <li data-badge="3"><strong>SECTION III</strong> <span class="dimmed">-</span> <span class="takeaway-label">LABEL THREE</span><br>Description of the third section or takeaway</li>
+                </ul>
+            </div>
+            <div class="arc-badges">
+                <div class="arc-badge step-paired" data-badge="1">
+                    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="40" cy="40" r="36" fill="none" stroke="#e3a463" stroke-width="2"/>
+                        <text x="40" y="46" text-anchor="middle" fill="#e3a463" font-size="24" font-weight="600">1</text>
+                    </svg>
+                    <span class="arc-badge-label">Section I</span>
+                    <span class="arc-badge-title">Label</span>
+                </div>
+                <div class="arc-badge step-paired" data-badge="2">
+                    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="40" cy="40" r="36" fill="none" stroke="#e5bc9c" stroke-width="2"/>
+                        <text x="40" y="46" text-anchor="middle" fill="#e5bc9c" font-size="24" font-weight="600">2</text>
+                    </svg>
+                    <span class="arc-badge-label">Section II</span>
+                    <span class="arc-badge-title">Label</span>
+                </div>
+                <div class="arc-badge step-paired" data-badge="3">
+                    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="40" cy="40" r="36" fill="none" stroke="#537c9b" stroke-width="2"/>
+                        <text x="40" y="46" text-anchor="middle" fill="#537c9b" font-size="24" font-weight="600">3</text>
+                    </svg>
+                    <span class="arc-badge-label">Section III</span>
+                    <span class="arc-badge-title">Label</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 10: arc-intro-slide (basic)
+         Arc section intro with centered title and divider.
+         Use for: introducing a new major section/arc of the presentation.
+         ============================================ -->
+    <div class="slide arc-intro-slide" data-arc="1">
+        <div class="slide-content">
+            <div class="arc-label">Arc Label - Section Name</div>
+            <div class="arc-title">Section Title Here</div>
+            <div class="arc-divider"></div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 11: arc-intro-slide + background image + .arc-bg-overlay
+         Arc intro with a background photo and dark overlay.
+         Use for: visually rich section intros with thematic imagery.
+         ============================================ -->
+    <div class="slide arc-intro-slide" data-arc="2" style="background: var(--bg-elevated) center/cover no-repeat;">
+        <div class="arc-bg-overlay"></div>
+        <div class="slide-content">
+            <div class="arc-label">Arc Label - Section Name</div>
+            <div class="arc-title">Section Title with Background</div>
+            <div class="arc-divider"></div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 12: subtitle-bullet-slide (basic)
+         Subtitle + bullet list + optional closing note.
+         Use for: topic intros with supporting points and a summary.
+         ============================================ -->
+    <div class="slide subtitle-bullet-slide" data-arc="3">
+        <div class="slide-content">
+            <div class="arc-label">Arc Label</div>
+            <p class="subtitle">Subtitle text that provides context for the bullet points below</p>
+            <ul>
+                <li><span class="highlight">Key Term</span> - description of the first point</li>
+                <li><span class="highlight">Key Term</span> - description of the second point</li>
+            </ul>
+            <p class="slide-closing step">Closing statement goes here.</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 13: subtitle-bullet-slide + .background-layout
+         Two-column layout: text left, image right.
+         Use for: content with supporting visual, side-by-side layouts.
+         ============================================ -->
+    <div class="slide subtitle-bullet-slide" data-arc="3">
+        <div class="slide-content background-layout">
+            <div class="background-text">
+                <h1>Two-Column Layout Title</h1>
+                <p class="subtitle">Subtitle or context text</p>
+                <ul>
+                    <li>First point goes here</li>
+                    <li>Second point goes here</li>
+                    <li>Third point goes here</li>
+                    <li>Fourth point goes here</li>
+                </ul>
+            </div>
+            <div class="background-photo">
+                <div style="width: 100%; aspect-ratio: 3/4; background: var(--bg-elevated); border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); border: 1px solid var(--border-warm); display: flex; align-items: center; justify-content: center;">
+                    <span style="color: var(--text-muted); font-size: 0.875rem;">Image</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 14: subtitle-bullet-slide + .background-layout + .card-stack
+         Text left with stacked card images on the right.
+         Use for: progressive reveals with visual examples (e.g. screenshots).
+         ============================================ -->
+    <div class="slide subtitle-bullet-slide" data-arc="3">
+        <div class="slide-content background-layout">
+            <div class="background-text">
+                <h1>Card Stack Layout Title</h1>
+                <p class="subtitle">Items reveal cards on the right</p>
+                <ul>
+                    <li data-show-card="sg-card-1">First item reveals card one</li>
+                    <li data-show-card="sg-card-2">Second item reveals card two</li>
+                    <li data-show-card="sg-card-3">Third item reveals card three</li>
+                </ul>
+            </div>
+            <div class="card-stack">
+                <div class="stack-card" id="sg-card-1" style="width: 75%; aspect-ratio: 4/3; background: var(--bg-elevated); border-radius: 10px; border: 1px solid var(--border-warm); display: flex; align-items: center; justify-content: center;">
+                    <span style="color: var(--text-muted); font-size: 0.75rem;">Card 1</span>
+                </div>
+                <div class="stack-card" id="sg-card-2" style="width: 75%; aspect-ratio: 4/3; background: var(--bg-surface); border-radius: 10px; border: 1px solid var(--border-warm); display: flex; align-items: center; justify-content: center;">
+                    <span style="color: var(--text-muted); font-size: 0.75rem;">Card 2</span>
+                </div>
+                <div class="stack-card" id="sg-card-3" style="width: 75%; aspect-ratio: 4/3; background: var(--bg-secondary); border-radius: 10px; border: 1px solid var(--border-warm); display: flex; align-items: center; justify-content: center;">
+                    <span style="color: var(--text-muted); font-size: 0.75rem;">Card 3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 15: subtitle-bullet-slide + .header-photo-layout
+         Full-width title, image left, bullet list right.
+         Use for: content with a prominent supporting image alongside details.
+         ============================================ -->
+    <div class="slide subtitle-bullet-slide" data-arc="4">
+        <div class="slide-content header-photo-layout">
+            <p class="sub-heading">Sub-heading Label</p>
+            <h1>Header Photo Layout Title</h1>
+            <div class="header-photo-left">
+                <div class="background-photo">
+                    <div style="width: 100%; aspect-ratio: 4/3; background: var(--bg-elevated); border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); border: 1px solid var(--border-warm); display: flex; align-items: center; justify-content: center;">
+                        <span style="color: var(--text-muted); font-size: 0.875rem;">Image</span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-photo-right">
+                <ul>
+                    <li>First detail point</li>
+                    <li>Second detail point</li>
+                    <li>Third detail point</li>
+                    <li>Fourth detail point</li>
+                </ul>
+            </div>
+            <p class="slide-closing">Closing statement goes here</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 16: quote-slide + .quote-block
+         Multiple quote blocks with annotation text.
+         Use for: examples, testimonials, multi-part quotes with commentary.
+         ============================================ -->
+    <div class="slide quote-slide" data-arc="1">
+        <div class="slide-content">
+            <h1>Quote Blocks with Annotations</h1>
+            <div class="quote-block">
+                <p>&ldquo;First quote text goes here. This demonstrates the primary quote block style with italic text and a left border accent.&rdquo;</p>
+                <div class="annotation">[Annotation: context or commentary about the quote above.]</div>
+            </div>
+            <div class="quote-block">
+                <p>&ldquo;Second quote text goes here. Multiple quote blocks stack vertically with consistent spacing.&rdquo;</p>
+                <div class="annotation">[Annotation: additional context or analysis.]</div>
+            </div>
+            <div class="quote-block">
+                <p>&ldquo;Third quote text goes here. Use as many blocks as needed.&rdquo;</p>
+                <div class="annotation">[Annotation: final commentary.]</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 17: quote-slide + .quote-with-portrait
+         Portrait image alongside a quote block.
+         Use for: attributed quotes, character/person-driven narratives.
+         ============================================ -->
+    <div class="slide quote-slide" data-arc="3">
+        <div class="slide-content">
+            <h1>Quote with Portrait</h1>
+            <div class="quote-with-portrait">
+                <div class="portrait-frame">
+                    <div style="width: 240px; height: 280px; background: var(--bg-elevated); border-radius: 16px; border: 3px solid var(--accent-primary); box-shadow: 0 4px 20px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;">
+                        <span style="color: var(--text-muted); font-size: 0.875rem;">Portrait</span>
+                    </div>
+                </div>
+                <div class="quote-block">
+                    <p>&ldquo;Quote text goes here alongside the portrait image. This layout places the image on the left and the quote block on the right, creating a character-driven narrative feel.&rdquo;</p>
+                </div>
+            </div>
+            <p class="narrative-text" style="margin-top: 1.5rem;">Narrative follow-up text can go below the portrait and quote, providing additional context or story continuation.</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 18: columns-slide + .columns-grid (3-col)
+         Three column cards with headers and bullet lists.
+         Use for: comparisons, categories, side-by-side topic breakdowns.
+         ============================================ -->
+    <div class="slide columns-slide" data-arc="1">
+        <div class="slide-content">
+            <h1>Three Column Layout</h1>
+            <div class="columns-grid">
+                <div class="column-card">
+                    <h3>Column One</h3>
+                    <ul>
+                        <li>Point A</li>
+                        <li>Point B</li>
+                        <li>Point C</li>
+                    </ul>
+                </div>
+                <div class="column-card">
+                    <h3>Column Two</h3>
+                    <ul>
+                        <li>Point D</li>
+                        <li>Point E</li>
+                        <li>Point F</li>
+                    </ul>
+                </div>
+                <div class="column-card">
+                    <h3>Column Three</h3>
+                    <ul>
+                        <li>Point G</li>
+                        <li>Point H</li>
+                        <li>Point I</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 19: columns-slide + .columns-grid.two-col
+         Two column cards with header, bullets, and .column-note.
+         Use for: two-topic comparisons, paired concepts with footnotes.
+         ============================================ -->
+    <div class="slide columns-slide" data-arc="4">
+        <div class="slide-content">
+            <h1>Two Column Layout</h1>
+            <div class="columns-grid two-col">
+                <div class="column-card">
+                    <h3><span class="highlight">Left Column</span></h3>
+                    <p>Introductory text:</p>
+                    <ul>
+                        <li class="step">First point</li>
+                        <li class="step">Second point</li>
+                        <li class="step">Third point</li>
+                    </ul>
+                    <p class="step column-note">Italic footnote for the left column providing additional context.</p>
+                </div>
+                <div class="column-card">
+                    <h3><span class="highlight">Right Column</span></h3>
+                    <ul>
+                        <li class="step">First point</li>
+                        <li class="step">Second point</li>
+                        <li class="step">Third point</li>
+                    </ul>
+                    <p class="step column-note">Italic footnote for the right column providing additional context.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SLIDE 20: visual-slide + .svg-container
+         Centered image or SVG with a list below.
+         Use for: concept diagrams, single visual with supporting bullets.
+         ============================================ -->
+    <div class="slide visual-slide" data-arc="3">
+        <div class="slide-content">
+            <h1>Visual Slide Title</h1>
+            <div class="svg-container" style="max-width: 350px;">
+                <div style="width: 100%; aspect-ratio: 1/1; background: var(--bg-elevated); border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); border: 1px solid var(--border-warm); display: flex; align-items: center; justify-content: center;">
+                    <span style="color: var(--text-muted); font-size: 0.875rem;">SVG / Image</span>
+                </div>
+            </div>
+            <ul style="list-style: none; padding: 0; text-align: left; max-width: 500px; margin: 1.5rem auto 0;">
+                <li style="color: var(--text-secondary); font-size: clamp(0.9rem, 2vw, 1.05rem); line-height: 1.7; margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="color: var(--accent-primary); position: absolute; left: 0; font-size: 0.75em;">&bull;</span>First supporting point</li>
+                <li style="color: var(--text-secondary); font-size: clamp(0.9rem, 2vw, 1.05rem); line-height: 1.7; margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="color: var(--accent-primary); position: absolute; left: 0; font-size: 0.75em;">&bull;</span>Second supporting point</li>
+                <li style="color: var(--text-secondary); font-size: clamp(0.9rem, 2vw, 1.05rem); line-height: 1.7; margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="color: var(--accent-primary); position: absolute; left: 0; font-size: 0.75em;">&bull;</span>Third supporting point</li>
+            </ul>
+        </div>
+    </div>
+
+</div><!-- /.slideshow -->
+
+<script src="../presentation/script.js"></script>
+</body>
+</html>
