@@ -670,12 +670,6 @@ ul.build-up {
     justify-content: space-between;
     font-size: clamp(0.875rem, 2vw, 1rem);
     z-index: 10;
-    transition: opacity 0.4s ease;
-}
-
-.nav-hints.hidden {
-    opacity: 0;
-    pointer-events: none;
 }
 
 .nav-hints span {
@@ -704,7 +698,12 @@ ul.build-up {
     cursor: pointer;
     padding: 0.3rem 0.6rem;
     border-radius: 4px;
-    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    transition: opacity 0.3s ease, color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+#fullscreen-btn.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 #fullscreen-btn:hover {

@@ -337,21 +337,21 @@ document.getElementById('fullscreen-btn').addEventListener('click', function (e)
     }
 });
 
-// ---- Auto-hide nav bar on mouse idle ----
-var navHints = document.querySelector('.nav-hints');
-var navIdleTimer = null;
-var NAV_IDLE_MS = 3000;
+// ---- Auto-hide fullscreen button on mouse idle ----
+var fsBtn = document.getElementById('fullscreen-btn');
+var fsIdleTimer = null;
+var FS_IDLE_MS = 1500;
 
-function resetNavIdle() {
-    navHints.classList.remove('hidden');
-    clearTimeout(navIdleTimer);
-    navIdleTimer = setTimeout(function () {
-        navHints.classList.add('hidden');
-    }, NAV_IDLE_MS);
+function resetFsIdle() {
+    fsBtn.classList.remove('hidden');
+    clearTimeout(fsIdleTimer);
+    fsIdleTimer = setTimeout(function () {
+        fsBtn.classList.add('hidden');
+    }, FS_IDLE_MS);
 }
 
-document.addEventListener('mousemove', resetNavIdle);
-resetNavIdle();
+document.addEventListener('mousemove', resetFsIdle);
+resetFsIdle();
 
 // ---- Touch swipe ----
 var touchStartX = 0;
