@@ -670,6 +670,12 @@ ul.build-up {
     justify-content: space-between;
     font-size: clamp(0.875rem, 2vw, 1rem);
     z-index: 10;
+    transition: opacity 0.4s ease;
+}
+
+.nav-hints.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .nav-hints span {
@@ -688,6 +694,23 @@ ul.build-up {
 #nav-next.ready {
     color: var(--accent-light);
     background: rgba(229, 188, 156, 0.12);
+}
+
+#fullscreen-btn {
+    background: none;
+    border: 1px solid rgba(122, 149, 168, 0.3);
+    color: rgba(122, 149, 168, 0.5);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+#fullscreen-btn:hover {
+    color: var(--accent-light);
+    background: rgba(229, 188, 156, 0.12);
+    border-color: rgba(229, 188, 156, 0.3);
 }
 
 /* ---------- Slide Counter ---------- */

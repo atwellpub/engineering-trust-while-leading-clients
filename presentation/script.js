@@ -275,6 +275,11 @@ document.addEventListener('keydown', function (e) {
             e.preventDefault();
             showSlide(totalSlides - 1, true);
             break;
+        case 'Escape':
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+            }
+            break;
     }
 });
 
@@ -321,6 +326,32 @@ document.getElementById('nav-next').addEventListener('click', function (e) {
         nextSlide();
     }
 });
+
+// ---- Fullscreen toggle ----
+document.getElementById('fullscreen-btn').addEventListener('click', function (e) {
+    e.stopPropagation();
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        document.documentElement.requestFullscreen();
+    }
+});
+
+// ---- Auto-hide nav bar on mouse idle ----
+var navHints = document.querySelector('.nav-hints');
+var navIdleTimer = null;
+var NAV_IDLE_MS = 3000;
+
+function resetNavIdle() {
+    navHints.classList.remove('hidden');
+    clearTimeout(navIdleTimer);
+    navIdleTimer = setTimeout(function () {
+        navHints.classList.add('hidden');
+    }, NAV_IDLE_MS);
+}
+
+document.addEventListener('mousemove', resetNavIdle);
+resetNavIdle();
 
 // ---- Touch swipe ----
 var touchStartX = 0;
